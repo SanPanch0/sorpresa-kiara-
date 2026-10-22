@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Una sorpresa para ti 💙</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="entrada" class="entrada">
+  <div id="paso1" class="paso">
+    <p class="eyebrow">Tengo algo para ti</p>
+    <h1 id="entrada-msg"></h1>
+    <button id="btn-descubrir" class="btn">Descubrir la sorpresa</button>
+  </div>
+  <div id="paso2" class="paso" hidden>
+    <div id="sorpresa-foto" class="foto-redonda"></div>
+    <h2 id="sorpresa-titulo"></h2>
+    <p id="sorpresa-texto" class="frase"></p>
+    <button id="btn-entrar" class="btn"></button>
+  </div>
+</div>
+
+<main id="principal" class="oculto">
+  <header class="portada" id="inicio">
+    <p class="eyebrow">Nuestra historia</p>
+    <h1 id="nombres"></h1>
+    <p id="frase" class="frase"></p>
+    <figure class="polaroid portada-foto"><div class="marco" id="marco-portada"></div></figure>
+    <button id="btn-musica" class="btn btn-suave" aria-pressed="false">🎵 Activar música</button>
+    <p id="msg-musica" class="aviso" role="status"></p>
+  </header>
+
+  <nav class="nav" aria-label="Secciones">
+    <a href="#contador">Tiempo</a><a href="#ruleta">Ruleta</a><a href="#galeria">Fotos</a>
+    <a href="#recuerdos">Recuerdos</a><a href="#carta">Carta</a><a href="#carino">Cariño</a>
+  </nav>
+
+  <section id="contador"><h2>Llevamos juntos desde el 22 de febrero</h2>
+    <div id="contador-caja" class="contador"></div>
+    <p id="contador-aviso" class="aviso" role="alert"></p></section>
+
+  <section id="ruleta"><h2>La ruleta de citas</h2>
+    <div class="rueda-caja"><div class="puntero" aria-hidden="true">▼</div>
+      <svg id="rueda" viewBox="-100 -100 200 200" role="img" aria-label="Ruleta de planes"></svg></div>
+    <button id="btn-girar" class="btn">Girar</button>
+    <p class="aviso">Puedes girar las veces que quieras 😉</p>
+    <div id="resultado" class="resultado" hidden>
+      <p class="eyebrow">La ruleta decidió</p><h3 id="pregunta"></h3>
+      <div id="zona-botones" class="zona-botones">
+        <button id="btn-si" class="btn">Sí</button>
+        <button id="btn-no" class="btn btn-no">No</button>
+      </div>
+    </div></section>
+
+  <section id="galeria"><h2>Nuestras fotos</h2>
+    <div id="filtros" class="filtros" role="group" aria-label="Filtrar fotos"></div>
+    <div id="galeria-grid" class="galeria"></div>
+    <label class="btn btn-suave subir">📷 Añadir fotos desde mi dispositivo
+      <input id="subir" type="file" accept="image/*" multiple hidden></label>
+    </section>
+
+  <section id="recuerdos"><h2>Nuestros recuerdos</h2><ol id="linea" class="linea"></ol></section>
+
+  <section id="carta"><h2>Una carta para ti</h2>
+    <button id="btn-carta" class="btn">💌 Abrir carta</button></section>
+
+  <section id="carino"><h2>Con cariño</h2>
+    <figure class="polaroid portada-foto"><div class="marco" id="marco-carino"></div></figure>
+    <p id="carino-texto" class="frase"></p>
+    <p id="carino-firma" class="final"></p></section>
+
+  <section id="final"><h2>Una última cosa…</h2>
+    <button id="btn-final" class="btn">💙 Revelar sorpresa final</button>
+    <p id="msg-final" class="final" role="status"></p></section>
+
+  <footer><a href="#inicio">↑ Volver al inicio</a><p>Hecho con cariño 💙💗</p></footer>
+</main>
+
+<div id="carta-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="carta-titulo" hidden>
+  <div class="modal-caja carta-papel"><button class="cerrar" data-cerrar aria-label="Cerrar carta">✕</button>
+    <h2 id="carta-titulo"></h2><div id="carta-texto"></div></div></div>
+
+<div id="foto-modal" class="modal" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <div class="modal-caja"><button class="cerrar" data-cerrar aria-label="Cerrar foto">✕</button>
+    <div id="foto-grande"></div><h3 id="foto-titulo"></h3><p id="foto-desc"></p></div></div>
+
+<div id="corazones" aria-hidden="true"></div>
+<noscript><p style="padding:1rem">Activa JavaScript para ver la sorpresa completa.</p></noscript>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
